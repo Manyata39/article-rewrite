@@ -1,12 +1,63 @@
-# React + Vite
+# ✍️ ReWriteX – Article Rewriting Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ReWriteX is a smart article rewriting tool that provides real-time synonym suggestions, sentence rewriting using AI, keyboard accessibility, export functionality (TXT, PDF, DOCX), and a dark/light mode interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔁 **Inline Synonym Suggestions**
+- 🧠 **AI-Powered Sentence Rewriting (via Groq API)**
+- 🌗 **Dark/Light Theme Toggle**
+- ♿ **Keyboard Accessible Navigation**
+- ⬅️ ➡️ **Undo/Redo Functionality**
+- 📤 **Export Options**: TXT, PDF, DOCX
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Tailwind CSS
+- **Backend/AI**: Groq API (for sentence rewriting), Datamuse API (for synonyms)
+- **Utilities**: jsPDF, html2canvas, docx, file-saver
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/rewritex.git
+cd article-rewriter
+npm install
+npm run dev
+```
+
+📁 Project Structure
+├── public/
+│   ├── logo.png
+│   └── preview.png
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── SuggestionPopup.jsx
+│   ├── hooks/
+│   │   └── useUndoRedo.js
+│   ├── utils/
+│   │   ├── api.js
+│   │   ├── rewriteService.js
+│   │   └── dictionary.js
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js
+├── index.css
+└── README.md
+
+⚙️ Environment Variables
+Create a .env file for secure API keys:
+VITE_GROQ_API_KEY=your_groq_api_key_here
+
+🧪 How to Use
+1. Start typing in the input box.
+
+2. Hover or stop over any word to get synonym suggestions.
+
+3. Accept or reject via buttons or arrow/enter keys.
+
+4. Click ✨ to rewrite the entire content using AI.
+
+5. Export the result via the ⬇️ Export button.
